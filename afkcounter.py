@@ -18,8 +18,8 @@ class counter(discord.Client):
         print('\u001b[32m    logged in as {0}'.format(self.user))
     async def on_message(self, message):
         channel = message.channel
-        if 'afk' in message.content:
-          for i in range(1, 1001):
+        if 'check' in message.content:
+          for i in range(1, 101):
             await message.channel.send(i)
       
 
