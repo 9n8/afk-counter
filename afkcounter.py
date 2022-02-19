@@ -1,14 +1,22 @@
-import discord, random, os, time
+import discord, os, asyncio, sys, time
+
+from pystyle import Colors, Colorate
+
 from discord.ext import commands
 
-token = input("Enter Token: ")
+
+def slow_write(t):
+    for f in t: print('' + f, end="");sys.stdout.flush();time.sleep(0.0005)
+
+slow_write("\u001b[38;5;159m-> Insert Token; ")
+token = input()
 
 class counter(discord.Client):
     async def on_ready(self):
         os.system('cls')
         os.system(f'title [COUNTER]')
         os.system(f'mode 30,15')
-        print(f""" \u001b[31m
+        slow_write(""" \u001b[31m
          ╔═╗╔═╗╦╔═
          ╠═╣╠╣ ╠╩╗
          ╩ ╩╚  ╩ ╩ \u001b[35m@9n8
